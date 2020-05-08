@@ -126,3 +126,44 @@
     where
         movie0_.id=?
 10:50:56,916 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:51:53,788 DEBUG SQL:109 - 
+    select
+        movie0_.id as id1_1_0_,
+        movie0_.name as name2_1_0_ 
+    from
+        Movie movie0_ 
+    where
+        movie0_.id=?
+10:51:53,793 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:51:53,846 DEBUG SQL:109 - 
+    select
+        actor0_.id as id1_0_0_,
+        actor0_.name as name2_0_0_ 
+    from
+        Actor actor0_ 
+    where
+        actor0_.id=?
+10:51:53,847 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+10:51:53,860 DEBUG SQL:109 - 
+    select
+        actor0_.movie_id as movie_id1_1_0_,
+        actor0_.actor_id as actor_id2_2_0_,
+        actor1_.id as id1_0_1_,
+        actor1_.name as name2_0_1_ 
+    from
+        movie_actor actor0_ 
+    inner join
+        Actor actor1_ 
+            on actor0_.actor_id=actor1_.id 
+    where
+        actor0_.movie_id=?
+10:51:53,861 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:51:53,898 DEBUG SQL:109 - 
+    insert 
+    into
+        movie_actor
+        (movie_id, actor_id) 
+    values
+        (?, ?)
+10:51:53,899 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:51:53,900 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [2]
