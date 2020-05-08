@@ -1,0 +1,34 @@
+14:31:52,517 DEBUG SQL:109 - 
+    insert 
+    into
+        passport
+        (passport_number) 
+    values
+        (?)
+14:31:52,522 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [8765544]
+14:31:52,530 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (customer_name, passport_id) 
+    values
+        (?, ?)
+14:31:52,530 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [Himanshu]
+14:31:52,531 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [1]
+14:32:45,645 DEBUG SQL:109 - 
+    insert 
+    into
+        passport
+        (passport_number) 
+    values
+        (?)
+14:32:45,650 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [87765544]
+14:32:45,658 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (customer_name, passport_id) 
+    values
+        (?, ?)
+14:32:45,659 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [Kumar]
+14:32:45,659 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [2]
