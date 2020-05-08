@@ -1,13 +1,13 @@
 
 package client;
 
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-
+import entity.Actor;
+import entity.Movie;
 import util.HibernateUtil;
-import entity.Customer;
-import entity.Passport;
 
 
 public class HelloWorldClient {
@@ -16,15 +16,37 @@ public class HelloWorldClient {
 				Session session = HibernateUtil.getSessionFactory().openSession();
         		Transaction txn = session.getTransaction();
         		try {
+//        			txn.begin();
+//        	
+//        			Movie movie1 = new Movie("Ganjam");
+//        			Movie movie2 = new Movie("Destination");
+//        			
+//        			Actor actor1 = new Actor("Deol");
+//        			Actor actor2 = new Actor("Rajni");
+//        			
+//        			movie1.getActor().add(actor1);
+//        			
+//        			movie2.getActor().add(actor2);
+//        			movie2.getActor().add(actor1);
+//        			
+//        			session.persist(movie1);
+//        			session.persist(movie2);
+//        			
+//	        		txn.commit();
+	        		
         			txn.begin();
-        	
-        			Passport passport = new Passport("8765544");
-        			Customer customer = new Customer("Adam",passport);
+                	
+        			Movie movie1 = (Movie)session.get(Movie.class, 1l);
         			
-        			session.persist(customer);
+        			Actor actor1 = (Actor)session.get(Actor.class, 2l);
         			
+        			movie1.getActor().add(actor1);
         			
+        			session.persist(movie1);
 	        		txn.commit();
+	        		
+	        		
+	        		
         		}	catch(Exception e) {
 	        			if(txn != null) { txn.rollback(); }
 	        			e.printStackTrace();

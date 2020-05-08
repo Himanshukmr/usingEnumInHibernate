@@ -21,8 +21,8 @@
         <!-- Create/update tables automatically using mapping metadata -->
         <property name="hbm2ddl.auto">update</property>
         
-        <mapping class="entity.Passport" />	
-        <mapping class="entity.Customer" />	
+        <mapping class="entity.Movie" />	
+        <mapping class="entity.Actor" />	
 		
     </session-factory>
 </hibernate-configuration>
