@@ -7,29 +7,24 @@
     <session-factory>
 
         <!-- Database connection settings -->
-        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+            <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/test</property>
         <property name="connection.username">root</property>
         <property name="connection.password">password</property>
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         
-        <!-- Pretty print the SQL in the log file and console -->
+        <!-- Pretty print the SQL in the log and console -->
         <property name="format_sql">true</property>
         
         <!-- Create/update tables automatically using mapping metadata -->
         <property name="hbm2ddl.auto">update</property>
-        
-        <mapping class="entity.Movie" />	
-        <mapping class="entity.Actor" />	
+
+        <mapping class="entity.EmployeeDetails" />
 		
     </session-factory>
 </hibernate-configuration>
-
-
-
-
 
 
 
